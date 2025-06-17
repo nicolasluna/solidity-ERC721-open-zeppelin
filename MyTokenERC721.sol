@@ -11,7 +11,7 @@ contract MyToken is ERC721, ERC721URIStorage, Ownable {
 
     constructor(address initialOwner)
         ERC721("MyToken", "CEK")
-        Ownable(initialOwner)
+        Ownable(initialOwner) // use msg.sender to test
     {}
 
     function safeMint(address to, string memory uri)
